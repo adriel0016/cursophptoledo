@@ -115,22 +115,6 @@ class Voo
     /**
      * @return mixed
      */
-    public function getCodigoaeronave()
-    {
-        return $this->codigoaeronave;
-    }
-
-    /**
-     * @param mixed $codigoaeronave
-     */
-    public function setCodigoaeronave($codigoaeronave)
-    {
-        $this->codigoaeronave = $codigoaeronave;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getStatusvoo()
     {
         return $this->statusvoo;
@@ -208,7 +192,6 @@ class Voo
             $stmt->bindParam(":portao", $this->getPortao());
             $stmt->bindParam(":cia", $this->getCia());
             $stmt->bindParam(":datavoo", $this->getDatavoo());
-            $stmt->bindParam(":codigoaeronave", $this->getCodigoaeronave());
             $stmt->bindParam(":codigocia", $this->getCodigocia());
             $stmt->bindParam(":codigocidade", $this->getCodigocidade());
             $stmt->bindParam(":statusvoo", $this->getStatusvoo());
@@ -249,7 +232,6 @@ class Voo
             $stmt->bindParam(":portao", $this->getPortao());
             $stmt->bindParam(":cia", $this->getCia());
             $stmt->bindParam(":datavoo", $this->getDatavoo());
-            $stmt->bindParam(":codigoaeronave", $this->getCodigoaeronave());
             $stmt->bindParam(":statusvoo", $this->getStatusvoo());
             $stmt->bindParam(":codigocia", $this->getCodigocia());
             $stmt->bindParam(":codigocidade", $this->getCodigocidade());
@@ -284,7 +266,6 @@ class Voo
             $this->setPortao($row['portao']);
             $this->setCia($row['cia']);
             $this->setDatavoo($row['datavoo']);
-            $this->setCodigoaeronave($row['codigoaeronave']);
             $this->setStatusvoo($row['statusvoo']);
             $this->setCia($row['codigocia']);
             $this->setCodigocidade($row['codigocidade']);

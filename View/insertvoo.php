@@ -40,26 +40,26 @@
                             <div class="form-row">
                                 <div class="form-group col-4">
                                     <label>Identificação</label>
-                                    <input type="text" class="form-control">
+                                    <input name="identificacao" type="text" class="form-control">
                                 </div>
                                 <div class="form-group col-4">
                                     <label>Portão</label>
-                                    <input type="text" class="form-control">
+                                    <input name="portao" type="text" class="form-control">
                                 </div>
                                 <div class="form-group col-4">
                                     <label>Data do Voo</label>
-                                    <input id="datavoo" type="text" class="form-control">
+                                    <input id="datavoo" name="datavoo" type="text" class="form-control">
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group col-6">
-                                    <label>CIA</label>
-                                    <select id="cia" class="form-control"></select>
+                                    <label>Companhia</label>
+                                    <select id="cia" name="cia" class="form-control"></select>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label>Status do Voo</label>
-                                    <select id="statusvoo" class="form-control"></select>
+                                    <select id="statusvoo" name="statusvoo" class="form-control"></select>
                                 </div>
                             </div>
 
@@ -70,7 +70,7 @@
                                 </div>
                                 <div class="form-group col-6">
                                     <label>Cidade</label>
-                                    <select id="cidades" class="form-control"></select>
+                                    <select id="cidades" name="cidade" class="form-control"></select>
                                 </div>
                             </div>
                         </div>
@@ -105,6 +105,32 @@
         <script>
 
             $(document).ready(function() {
+
+                // Cadastrar voo
+                $.ajax({
+                    type: "POST",
+                    url: '../Controller/VooController.php',
+                    data: {
+                        acao: 'cadastrar',
+                        identificacao: $('input[name="identificacao"]').val(),
+                        portao: $('input[name="portao"]').val(),
+                        datavoo: $('input[name="datavoo"]').val(),
+                        cia: $('select[name="cia"]').val(),
+                        statusvoo: $('select[name="statusvoo"]').val(),
+                        cidade: $('select[name="cidade"]').val()
+                    },
+                    success: function(result) {
+                        if(result) {
+                            result = JSON.parse(result);
+
+                            console.log(result);
+
+                        }
+                        else {
+                            // alert("Data not found");
+                        }
+                    },
+                });
 
                 $('#loading').fadeIn(0);
 
