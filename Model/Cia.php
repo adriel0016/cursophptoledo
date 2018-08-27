@@ -53,30 +53,14 @@ class Cia
         $this->conn = $db;
     }
 
-    // selecionar produto
-    function selecionar($codigo) {
-        try {
-            $query = "SELECT * FROM cia WHERE codigo = :codigo";
-            $stmt = $this->conn->prepare($query);
-            $stmt->bindParam(":codigo", $codigo, \PDO::PARAM_INT);
-            $stmt->execute();
-
-            $row = $stmt->fetch(\PDO::FETCH_ASSOC);
-
-            $row = array_map("utf8_encode", $row);
-
-            $this->setNome($row['nome']);
-            $this->setCodigo($row['codigo']);
-
-        } catch (\Exception $exception) {
-            echo $exception->getMessage();
-        }
-    }
-
-    // selecionar todos produtos
+    /**
+     * Selecionar Todos CIA
+     *
+     * @return array
+     */
     function selecionartodos() {
         try {
-            $query = "SELECT * FROM cia"; // WHERE datavoo = NOW()
+            $query = "SELECT * FROM cia";
             $stmt = $this->conn->prepare($query);
             $stmt->execute();
 

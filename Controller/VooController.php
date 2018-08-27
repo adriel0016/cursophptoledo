@@ -41,9 +41,12 @@ class VooController
 
 $acao = isset($_POST['acao']) ? $_POST['acao'] : '';
 
+$acao = htmlspecialchars($acao, ENT_QUOTES);
+
 switch ($acao){
     case 'selecionar':
         $codigo = isset($_POST['codigo']) ? $_POST['codigo'] : '';
+        $codigo = htmlspecialchars($codigo, ENT_QUOTES);
 
         $voo = new VooController();
         $voo->selecionar($codigo);

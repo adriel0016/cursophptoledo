@@ -70,7 +70,10 @@ class Estados
         $this->conn = $db;
     }
 
-    // selecionar produto
+    /**
+     * Selecionar Estados
+     * @param $codigo
+     */
     function selecionar($codigo) {
         try {
             $query = "SELECT * FROM estados WHERE codigo = :codigo";
@@ -91,10 +94,13 @@ class Estados
         }
     }
 
-    // selecionar todos produtos
+    /**
+     * Selecionar Todos Estados
+     * @return array
+     */
     function selecionartodos() {
         try {
-            $query = "SELECT * FROM estados"; // WHERE datavoo = NOW()
+            $query = "SELECT * FROM estados";
             $stmt = $this->conn->prepare($query);
             $stmt->execute();
 

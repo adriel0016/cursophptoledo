@@ -78,7 +78,10 @@ class Cidades
         $this->estados = new Estados($this->conn);
     }
 
-    // selecionar produto
+    /**
+     * Selecionar Cidade
+     * @param $codigo
+     */
     function selecionar($codigo) {
         try {
             $query = "SELECT * FROM cidades WHERE codigo = :codigo";
@@ -87,8 +90,6 @@ class Cidades
             $stmt->execute();
 
             $row = $stmt->fetch(\PDO::FETCH_ASSOC);
-
-            $row = array_map("utf8_encode", $row);
 
             $this->setNome($row['nome']);
             $this->setCodigoestado($row['codigoestado']);
@@ -101,7 +102,37 @@ class Cidades
         }
     }
 
-    // selecionar todos produtos
+    /**
+     * Selecionar por Estados
+     * @param $codigo
+     * @return array
+     */
+    function selecionarporestado($codigo) {
+        try {
+            $query = "SELECT * FROM cidades WHERE codigoestado = :codigo";
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(":codigo", $codigo, \PDO::PARAM_INT);
+            $stmt->execute();
+
+            $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+
+            $resultado = array();
+
+            foreach ($rows as $row){
+                $resultado[] = $row;
+            }
+
+            return $resultado;
+
+        } catch (\Exception $exception) {
+            echo $exception->getMessage();
+        }
+    }
+
+    /**
+     * Selecionar Todas Cidades
+     * @return array
+     */
     function selecionartodos() {
         try {
             $query = "SELECT * FROM cidades"; // WHERE datavoo = NOW()

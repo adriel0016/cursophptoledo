@@ -224,7 +224,11 @@ class Voo
         }
     }
 
-    // editar produto
+    /**
+     * Editar Voo
+     *
+     * @return bool
+     */
     function editar() {
         try {
 
@@ -261,7 +265,10 @@ class Voo
         }
     }
 
-    // selecionar produto
+    /**
+     * Selecionar Voo
+     * @param $codigo
+     */
     function selecionar($codigo) {
         try {
             $query = "SELECT * FROM voo WHERE codigo = :codigo";
@@ -288,7 +295,10 @@ class Voo
         }
     }
 
-    // selecionar todos produtos
+    /**
+     * Selecionar Todos Voos
+     * @return array
+     */
     function selecionartodos() {
         try {
             $query = "SELECT *, DATE_FORMAT(datavoo, '%H:%i') as horavoo FROM voo"; // WHERE datavoo = NOW()
@@ -307,7 +317,7 @@ class Voo
                 $cia = new Cia($this->conn);
                 $cidades = new Cidades($this->conn);
 
-                $statusvoo->selecionar($row['statusvoo']);
+                $statusvoo->selecionar((int)$row['statusvoo']);
                 $cia->selecionar((int)$row['codigocia']);
                 $cidades->selecionar((int)$row['codigocidade']);
 
