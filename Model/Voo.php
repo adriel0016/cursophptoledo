@@ -25,9 +25,7 @@ class Voo
     public $codigo;
     public $identificacao;
     public $portao;
-    public $cia;
     public $datavoo;
-    public $codigoaeronave;
     public $statusvoo;
     public $codigocia;
     public $codigocidade;
@@ -78,22 +76,6 @@ class Voo
     public function setPortao($portao)
     {
         $this->portao = $portao;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCia()
-    {
-        return $this->cia;
-    }
-
-    /**
-     * @param mixed $cia
-     */
-    public function setCia($cia)
-    {
-        $this->cia = $cia;
     }
 
     /**
@@ -173,36 +155,27 @@ class Voo
         try {
             // Query MySQL
             $query = "INSERT INTO voo 
-                         (identificacao = :identificacao, 
-                          portao = :portao, 
-                          cia = :cia, 
-                          datavoo = :datavoo, 
-                          codigoaeronave = :codigoaeronave,
-                          codigocia = :codigocia
-                          codigocidade = :codigocidade)";
+                         (identificacao, portao, datavoo, codigocia, statusvoo, codigocidade) 
+                         VALUES (:identificacao, :portao, :datavoo, :codigocia, :statusvoo, :codigocidade)";
 
             // Estabelece a conexão
             $stmt = $this->conn->prepare($query);
 
-            // Data e hora atual do servidor
-//            $this->datavoo = date('Y-m-d H:i:s');
-
             // Parametros
-            $stmt->bindParam(":identificacao", $this->getIdentificacao());
-            $stmt->bindParam(":portao", $this->getPortao());
-            $stmt->bindParam(":cia", $this->getCia());
-            $stmt->bindParam(":datavoo", $this->getDatavoo());
-            $stmt->bindParam(":codigocia", $this->getCodigocia());
-            $stmt->bindParam(":codigocidade", $this->getCodigocidade());
-            $stmt->bindParam(":statusvoo", $this->getStatusvoo());
+            $stmt->bindValue(":identificacao", (int)$this->getIdentificacao());
+            $stmt->bindValue(":portao", $this->getPortao());
+            $stmt->bindValue(":datavoo", $this->getDatavoo());
+            $stmt->bindValue(":codigocia", (int)$this->getCodigocia());
+            $stmt->bindValue(":statusvoo", (int)$this->getStatusvoo());
+            $stmt->bindValue(":codigocidade", (int)$this->getCodigocidade());
 
             if($stmt->execute()){
-                return true;
+                return $this->conn->lastInsertId();
             } else {
                 return false;
             }
 
-        } catch (Exception $exception) {
+        } catch (\Exception $exception) {
             echo $exception->getMessage();
         }
     }
@@ -218,11 +191,10 @@ class Voo
             $query = "UPDATE voo SET 
                           identificacao = :identificacao, 
                           portao = :portao, 
-                          cia = :cia, 
                           datavoo = :datavoo, 
-                          codigoaeronave = :codigoaeronave,
                           codigocia = :codigocia,
-                          codigocidade = : codigocidade
+                          statusvoo = :statusvoo,
+                          codigocidade = :codigocidade
                       WHERE
                           codigo = :codigo";
 
@@ -230,12 +202,37 @@ class Voo
 
             $stmt->bindParam(":identificacao", $this->getIdentificacao());
             $stmt->bindParam(":portao", $this->getPortao());
-            $stmt->bindParam(":cia", $this->getCia());
             $stmt->bindParam(":datavoo", $this->getDatavoo());
-            $stmt->bindParam(":statusvoo", $this->getStatusvoo());
             $stmt->bindParam(":codigocia", $this->getCodigocia());
+            $stmt->bindParam(":statusvoo", $this->getStatusvoo());
             $stmt->bindParam(":codigocidade", $this->getCodigocidade());
             $stmt->bindParam(':codigo', $this->getCodigo());
+
+            if($stmt->execute())
+                return true;
+
+            return false;
+
+        } catch (\Exception $exception) {
+            echo $exception->getMessage();
+        }
+    }
+
+    /**
+     * Excluir Voo
+     *
+     * @return bool
+     */
+    function excluir() {
+        try {
+
+            $query = "DELETE FROM voo WHERE codigo = :codigo";
+
+            $stmt = $this->conn->prepare($query);
+
+            $codigo = $this->getCodigo();
+
+            $stmt->bindParam(':codigo', $codigo);
 
             if($stmt->execute())
                 return true;
@@ -264,10 +261,9 @@ class Voo
 
             $this->setIdentificacao($row['identificacao']);
             $this->setPortao($row['portao']);
-            $this->setCia($row['cia']);
             $this->setDatavoo($row['datavoo']);
             $this->setStatusvoo($row['statusvoo']);
-            $this->setCia($row['codigocia']);
+            $this->setCodigocia($row['codigocia']);
             $this->setCodigocidade($row['codigocidade']);
             $this->setCodigo($row['codigo']);
 
@@ -282,7 +278,7 @@ class Voo
      */
     function selecionartodos() {
         try {
-            $query = "SELECT *, DATE_FORMAT(datavoo, '%H:%i') as horavoo FROM voo"; // WHERE datavoo = NOW()
+            $query = "SELECT *, DATE_FORMAT(datavoo, '%H:%i') as horavoo FROM voo WHERE date(datavoo) = date(now()) && datavoo >= NOW() ORDER BY datavoo ASC";
             $stmt = $this->conn->prepare($query);
             $stmt->execute();
 

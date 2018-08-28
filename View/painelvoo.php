@@ -21,6 +21,8 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/css/custom.css">
 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
         <title>Voos em Tempo Real</title>
     </head>
     <body>
@@ -41,6 +43,7 @@
                                 <th scope="col">VOO</th>
                                 <th scope="col" class="text-center">PORTÃO</th>
                                 <th scope="col" class="text-center">STATUS</th>
+                                <th scope="col" class="text-center">AÇÕES</th>
                             </tr>
                         </thead>
                         <tbody></tbody>

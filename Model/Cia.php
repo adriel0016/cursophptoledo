@@ -54,6 +54,29 @@ class Cia
     }
 
     /**
+     * Selecionar CIA
+     * @param $codigo
+     */
+    function selecionar($codigo) {
+        try {
+            $query = "SELECT * FROM cia WHERE codigo = :codigo";
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(":codigo", $codigo, \PDO::PARAM_INT);
+            $stmt->execute();
+
+            $row = $stmt->fetch(\PDO::FETCH_ASSOC);
+
+            $row = array_map("utf8_encode", $row);
+
+            $this->setNome($row['nome']);
+            $this->setCodigo($row['codigo']);
+
+        } catch (\Exception $exception) {
+            echo $exception->getMessage();
+        }
+    }
+
+    /**
      * Selecionar Todos CIA
      *
      * @return array
