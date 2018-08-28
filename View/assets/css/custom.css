@@ -26,6 +26,13 @@
     text-transform: uppercase;
 }
 
+.navbar-light .navbar-brand:hover,
+.navbar-light .navbar-brand:active,
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:visited{
+    color: #18b4e9;
+}
+
 .navbar-light .navbar-nav .nav-link {
     color: #ffffff78;
     font-size: 13px;

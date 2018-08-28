@@ -38,7 +38,7 @@ $(document).ready(function() {
 
                     if(result.length === 0){
                         $("table tbody").append('<tr>'+
-                            '<td colspan="6" class="text-center">Não há voos agendados para hoje!</td>' +
+                            '<td colspan="7" class="text-center">Não há voos agendados para hoje!</td>' +
                             '</tr>');
                     }
 
