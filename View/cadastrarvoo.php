@@ -30,7 +30,7 @@
     <body>
 
         <?php
-        include_once "header.php";
+            include_once "header.php";
         ?>
 
         <div class="site">
@@ -41,37 +41,37 @@
                             <div class="form-row">
                                 <div class="form-group col-4">
                                     <label>Identificação</label>
-                                    <input id="identificacao" name="identificacao" type="text" class="form-control" required>
+                                    <input id="identificacao" type="text" class="form-control" required>
                                 </div>
                                 <div class="form-group col-4">
                                     <label>Portão</label>
-                                    <input id="portao" name="portao" type="text" class="form-control" required>
+                                    <input id="portao" type="text" class="form-control" required>
                                 </div>
                                 <div class="form-group col-4">
                                     <label>Data do Voo</label>
-                                    <input id="datavoo" name="datavoo" type="text" class="form-control" required>
+                                    <input id="datavoo" type="text" class="form-control" required>
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group col-6">
                                     <label>Companhia</label>
-                                    <select id="cia" name="cia" class="form-control" required></select>
+                                    <select id="cia" class="form-control" required></select>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label>Status do Voo</label>
-                                    <select id="statusvoo" name="statusvoo" class="form-control" required></select>
+                                    <select id="statusvoo" class="form-control" required></select>
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group col-6">
                                     <label>Estado</label>
-                                    <select id="estado" name="estados" class="form-control" onchange="selecionacidades()" required></select>
+                                    <select id="estado" class="form-control" onchange="selecionacidades()" required></select>
                                 </div>
                                 <div class="form-group col-6">
                                     <label>Cidade</label>
-                                    <select id="cidade" name="cidades" class="form-control" required></select>
+                                    <select id="cidade" class="form-control" required></select>
                                 </div>
                             </div>
                         </div>
@@ -93,9 +93,8 @@
         </div>
 
         <?php
-        include_once "footer.php";
+            include_once "footer.php";
         ?>
-
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -108,13 +107,13 @@
 
         <script src="assets/js/sweetalert.min.js"></script>
 
-        <!--    FUNÇÕES JS REFERENTES AO CADASTRO    -->
+        <!-- FUNÇÕES JS REFERENTES AO CADASTRO -->
         <script src="assets/js/functions-cadastrarvoo.js"></script>
 
         <?php if(isset($_GET['codigo'])){ ?>
-        <script>
-            selecionarvoo('<?= $_GET['codigo'] ?>');
-        </script>
+            <script>
+                selecionarvoo('<?= $_GET['codigo'] ?>');
+            </script>
         <?php } ?>
 
     </body>

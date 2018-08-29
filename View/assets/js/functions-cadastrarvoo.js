@@ -230,7 +230,6 @@ function editar(codigo){
 }
 
 function selecionarvoo(codigo){
-
     // Selecionar voo
     $.ajax({
         type: "POST",

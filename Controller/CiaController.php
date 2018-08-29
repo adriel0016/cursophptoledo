@@ -27,7 +27,9 @@ class CiaController
     }
 }
 
-// COLOCAR EM UM ARQUIVO INTERMEDIÁRIO
+/**
+ * Parte responsável pelo controle de requisições
+ */
 
 $acao = isset($_POST['acao']) ? $_POST['acao'] : '';
 

@@ -85,9 +85,9 @@ class VooController
         $db = $database->getConnection();
 
         $voo = new Voo($db);
-        $ret = $voo->selecionar($codigo);
+        $voo->selecionar($codigo);
 
-        echo json_encode($ret, JSON_UNESCAPED_UNICODE);
+        echo json_encode($voo, JSON_UNESCAPED_UNICODE);
     }
 
     function selecionartodos(){
@@ -101,7 +101,9 @@ class VooController
     }
 }
 
-// COLOCAR EM UM ARQUIVO INTERMEDIÁRIO
+/**
+ * Parte responsável pelo controle de requisições
+ */
 
 $acao = isset($_POST['acao']) ? $_POST['acao'] : '';
 
