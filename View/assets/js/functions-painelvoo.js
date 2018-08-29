@@ -45,7 +45,11 @@ $(document).ready(function() {
                     $('#loading').delay("2000").fadeOut();
                 }
                 else {
-                    // alert("Data not found");
+                    swal(
+                        'Ops!',
+                        'Ocorreu um erro ao carregar os Voos!',
+                        'error'
+                    );
                 }
             },
         });
@@ -69,7 +73,11 @@ function excluir(codigo){
                 location.reload();
             }
             else {
-                // alert("Data not found");
+                swal(
+                    'Ops!',
+                    'Não foi possível excluir um Voo!',
+                    'error'
+                );
             }
         },
     });
