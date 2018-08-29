@@ -41,11 +41,11 @@
                             <div class="form-row">
                                 <div class="form-group col-4">
                                     <label>Identificação</label>
-                                    <input name="identificacao" type="text" class="form-control" required>
+                                    <input id="identificacao" name="identificacao" type="text" class="form-control" required>
                                 </div>
                                 <div class="form-group col-4">
                                     <label>Portão</label>
-                                    <input name="portao" type="text" class="form-control" required>
+                                    <input id="portao" name="portao" type="text" class="form-control" required>
                                 </div>
                                 <div class="form-group col-4">
                                     <label>Data do Voo</label>
@@ -67,11 +67,11 @@
                             <div class="form-row">
                                 <div class="form-group col-6">
                                     <label>Estado</label>
-                                    <select id="estados" class="form-control" onchange="selecionacidades()" required></select>
+                                    <select id="estado" name="estados" class="form-control" onchange="selecionacidades()" required></select>
                                 </div>
                                 <div class="form-group col-6">
                                     <label>Cidade</label>
-                                    <select id="cidades" name="cidade" class="form-control" required></select>
+                                    <select id="cidade" name="cidades" class="form-control" required></select>
                                 </div>
                             </div>
                         </div>
@@ -110,6 +110,12 @@
 
         <!--    FUNÇÕES JS REFERENTES AO CADASTRO    -->
         <script src="assets/js/functions-cadastrarvoo.js"></script>
+
+        <?php if(isset($_GET['codigo'])){ ?>
+        <script>
+            selecionarvoo('<?= $_GET['codigo'] ?>');
+        </script>
+        <?php } ?>
 
     </body>
 </html>

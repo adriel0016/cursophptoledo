@@ -200,13 +200,13 @@ class Voo
 
             $stmt = $this->conn->prepare($query);
 
-            $stmt->bindParam(":identificacao", $this->getIdentificacao());
-            $stmt->bindParam(":portao", $this->getPortao());
-            $stmt->bindParam(":datavoo", $this->getDatavoo());
-            $stmt->bindParam(":codigocia", $this->getCodigocia());
-            $stmt->bindParam(":statusvoo", $this->getStatusvoo());
-            $stmt->bindParam(":codigocidade", $this->getCodigocidade());
-            $stmt->bindParam(':codigo', $this->getCodigo());
+            $stmt->bindValue(":identificacao", (int)$this->getIdentificacao());
+            $stmt->bindValue(":portao", $this->getPortao());
+            $stmt->bindValue(":datavoo", $this->getDatavoo());
+            $stmt->bindValue(":codigocia", (int)$this->getCodigocia());
+            $stmt->bindValue(":statusvoo", (int)$this->getStatusvoo());
+            $stmt->bindValue(":codigocidade", (int)$this->getCodigocidade());
+            $stmt->bindValue(':codigo', (int)$this->getCodigo());
 
             if($stmt->execute())
                 return true;
@@ -259,13 +259,21 @@ class Voo
 
             $row = array_map("utf8_encode", $row);
 
-            $this->setIdentificacao($row['identificacao']);
-            $this->setPortao($row['portao']);
-            $this->setDatavoo($row['datavoo']);
-            $this->setStatusvoo($row['statusvoo']);
-            $this->setCodigocia($row['codigocia']);
-            $this->setCodigocidade($row['codigocidade']);
-            $this->setCodigo($row['codigo']);
+            $resultado[] = $row;
+
+            $statusvoo = new StatusVoo($this->conn);
+            $cia = new Cia($this->conn);
+            $cidades = new Cidades($this->conn);
+
+            $statusvoo->selecionar((int)$row['statusvoo']);
+            $cia->selecionar((int)$row['codigocia']);
+            $cidades->selecionar((int)$row['codigocidade']);
+
+            $resultado[0]['statusvoo'] = $statusvoo;
+            $resultado[0]['cia'] = $cia;
+            $resultado[0]['cidades'] = $cidades;
+
+            return $resultado;
 
         } catch (\Exception $exception) {
             echo $exception->getMessage();

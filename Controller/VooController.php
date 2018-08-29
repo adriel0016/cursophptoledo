@@ -85,9 +85,9 @@ class VooController
         $db = $database->getConnection();
 
         $voo = new Voo($db);
-        $voo->selecionar($codigo);
+        $ret = $voo->selecionar($codigo);
 
-        echo json_encode($voo, JSON_UNESCAPED_UNICODE);
+        echo json_encode($ret, JSON_UNESCAPED_UNICODE);
     }
 
     function selecionartodos(){

@@ -91,12 +91,12 @@ $(document).ready(function() {
             if(result) {
                 result = JSON.parse(result);
 
-                $("#estados").html(
+                $("#estado").html(
                     '<option value="" selected>Selecione um estado...</option>'
                 );
 
                 result.forEach(function(obj, key) {
-                    $("#estados").append(
+                    $("#estado").append(
                         '<option value="'+obj.codigo+'" class="text-center">'+ obj.nome +'</option>'
                     );
                 });
@@ -122,18 +122,18 @@ function selecionacidades(){
         url: '../Controller/CidadesController.php',
         data: {
             acao: 'selecionarporestado',
-            codigoestado: $("#estados").val()
+            codigoestado: $("#estado").val()
         },
         success: function(result) {
             if(result) {
                 result = JSON.parse(result);
 
-                $("#cidades").html(
+                $("#cidade").html(
                     '<option value="" selected>Selecione uma cidade...</option>'
                 );
 
                 result.forEach(function(obj, key) {
-                    $("#cidades").append(
+                    $("#cidade").append(
                         '<option value="'+obj.codigo+'" class="text-center">'+ obj.nome +'</option>'
                     );
                 });
@@ -157,12 +157,12 @@ function cadastrar(){
         url: '../Controller/VooController.php',
         data: {
             acao: 'cadastrar',
-            identificacao: $('input[name="identificacao"]').val(),
-            portao: $('input[name="portao"]').val(),
-            datavoo: $('input[name="datavoo"]').val(),
-            cia: $('select[name="cia"]').val(),
-            statusvoo: $('select[name="statusvoo"]').val(),
-            cidade: $('select[name="cidade"]').val()
+            identificacao: $('#identificacao').val(),
+            portao: $('#portao').val(),
+            datavoo: $('#datavoo').val(),
+            cia: $('#cia').val(),
+            statusvoo: $('#statusvoo').val(),
+            cidade: $('#cidade').val(),
         },
         success: function(result) {
 
@@ -190,23 +190,23 @@ function cadastrar(){
 }
 
 function editar(codigo){
-    // Cadastrar voo
+    // Editar voo
     $.ajax({
         type: "POST",
         url: '../Controller/VooController.php',
         data: {
             acao: 'editar',
-            identificacao: $('input[name="identificacao"]').val(),
-            portao: $('input[name="portao"]').val(),
-            datavoo: $('input[name="datavoo"]').val(),
-            cia: $('select[name="cia"]').val(),
-            statusvoo: $('select[name="statusvoo"]').val(),
-            cidade: $('select[name="cidade"]').val(),
+            identificacao: $('#identificacao').val(),
+            portao: $('#portao').val(),
+            datavoo: $('#datavoo').val(),
+            cia: $('#cia').val(),
+            statusvoo: $('#statusvoo').val(),
+            cidade: $('#cidade').val(),
             codigo: codigo
         },
         success: function(result) {
 
-            if(result > 0) {
+            if(result) {
                 result = JSON.parse(result);
 
                 swal(
@@ -222,6 +222,42 @@ function editar(codigo){
                 swal(
                     'Ops!',
                     'Não foi possível editar o Voo!',
+                    'error'
+                );
+            }
+        },
+    });
+}
+
+function selecionarvoo(codigo){
+
+    // Selecionar voo
+    $.ajax({
+        type: "POST",
+        url: '../Controller/VooController.php',
+        data: {
+            acao: 'selecionar',
+            codigo: codigo
+        },
+        success: function(result) {
+
+            if(result) {
+                result = JSON.parse(result);
+
+                $('#identificacao').val(result[0].identificacao);
+                $('#portao').val(result[0].portao);
+                $('#datavoo').val(result[0].datavoo);
+
+                $('#cia').val(result[0].cia.codigo);
+                $('#statusvoo').val(result[0].statusvoo.codigo);
+                $('#estado').val(result[0].cidades.codigoestado);
+                $('#cidade').val(result[0].cidades.codigo);
+
+            }
+            else {
+                swal(
+                    'Ops!',
+                    'Não foi possível selecionar o Voo!',
                     'error'
                 );
             }
