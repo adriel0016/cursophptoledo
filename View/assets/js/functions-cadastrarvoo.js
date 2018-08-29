@@ -244,14 +244,14 @@ function selecionarvoo(codigo){
             if(result) {
                 result = JSON.parse(result);
 
-                $('#identificacao').val(result[0].identificacao);
-                $('#portao').val(result[0].portao);
-                $('#datavoo').val(result[0].datavoo);
+                $('#identificacao').val(result.identificacao);
+                $('#portao').val(result.portao);
+                $('#datavoo').val(result.datavoo);
 
-                $('#cia').val(result[0].cia.codigo);
-                $('#statusvoo').val(result[0].statusvoo.codigo);
-                $('#estado').val(result[0].cidades.codigoestado);
-                $('#cidade').val(result[0].cidades.codigo);
+                $('#cia').val(result.cia.codigo);
+                $('#statusvoo').val(result.statusvoo.codigo);
+                $('#estado').val(result.cidades.codigoestado);
+                $('#cidade').val(result.cidades.codigo);
 
             }
             else {

@@ -30,6 +30,10 @@ class Voo
     public $codigocia;
     public $codigocidade;
 
+    public $statusvoos;
+    public $cia;
+    public $cidades;
+
     /**
      * @return mixed
      */
@@ -144,6 +148,10 @@ class Voo
 
     public function __construct($db){
         $this->conn = $db;
+
+        $this->statusvoos = new StatusVoo($this->conn);
+        $this->cia = new Cia($this->conn);
+        $this->cidades = new Cidades($this->conn);
     }
 
     /**
@@ -259,21 +267,17 @@ class Voo
 
             $row = array_map("utf8_encode", $row);
 
-            $resultado[] = $row;
+            $this->setIdentificacao($row['identificacao']);
+            $this->setPortao($row['portao']);
+            $this->setDatavoo($row['datavoo']);
+            $this->setStatusvoo($row['statusvoo']);
+            $this->setCodigocia($row['codigocia']);
+            $this->setCodigocidade($row['codigocidade']);
+            $this->setCodigo($row['codigo']);
 
-            $statusvoo = new StatusVoo($this->conn);
-            $cia = new Cia($this->conn);
-            $cidades = new Cidades($this->conn);
-
-            $statusvoo->selecionar((int)$row['statusvoo']);
-            $cia->selecionar((int)$row['codigocia']);
-            $cidades->selecionar((int)$row['codigocidade']);
-
-            $resultado[0]['statusvoo'] = $statusvoo;
-            $resultado[0]['cia'] = $cia;
-            $resultado[0]['cidades'] = $cidades;
-
-            return $resultado;
+            $this->statusvoos->selecionar((int)$row['statusvoo']);
+            $this->cia->selecionar((int)$row['codigocia']);
+            $this->cidades->selecionar((int)$row['codigocidade']);
 
         } catch (\Exception $exception) {
             echo $exception->getMessage();
@@ -298,17 +302,13 @@ class Voo
             foreach ($rows as $row){
                 $resultado[$i] = $row;
 
-                $statusvoo = new StatusVoo($this->conn);
-                $cia = new Cia($this->conn);
-                $cidades = new Cidades($this->conn);
+                $this->statusvoos->selecionar((int)$row['statusvoo']);
+                $this->cia->selecionar((int)$row['codigocia']);
+                $this->cidades->selecionar((int)$row['codigocidade']);
 
-                $statusvoo->selecionar((int)$row['statusvoo']);
-                $cia->selecionar((int)$row['codigocia']);
-                $cidades->selecionar((int)$row['codigocidade']);
-
-                $resultado[$i]['statusvoo'] = $statusvoo;
-                $resultado[$i]['cia'] = $cia;
-                $resultado[$i]['cidades'] = $cidades;
+                $resultado[$i]['statusvoo'] = $this->statusvoos;
+                $resultado[$i]['cia'] = $this->cia;
+                $resultado[$i]['cidades'] = $this->cidades;
 
                 $i++;
             }
