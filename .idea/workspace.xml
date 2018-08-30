@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ffc0cf6-4231-40b2-a941-06376bffd7f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/View/assets/css/bootstrap-datetimepicker.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/assets/css/sweetalert.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/assets/img/cia-logotipos/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/assets/img/cia-logotipos/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/assets/img/cia-logotipos/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/assets/img/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/assets/js/bootstrap-datetimepicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/assets/js/locales/bootstrap-datetimepicker.pt-BR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/assets/js/sweetalert.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,26 +60,37 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="250001595">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="php" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PHP" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.checkout.local" value="1" />
+          <entry key="git.branch.checkout.remote" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controller/VooController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="593">
-              <caret line="75" column="28" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
-              <folding>
-                <element signature="e#188#202#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Model/Voo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-594">
-              <caret line="234" column="47" selection-start-line="234" selection-start-column="47" selection-end-line="234" selection-end-column="47" />
+            <state relative-caret-position="420">
+              <caret line="233" column="24" selection-start-line="233" selection-start-column="24" selection-end-line="233" selection-end-column="24" />
               <folding>
                 <element signature="e#176#196#0#PHP" expanded="true" />
               </folding>
@@ -96,22 +99,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/assets/js/functions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#td#6;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#td#6;n#tr#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/Cia.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
+            <state relative-caret-position="1360">
               <caret line="68" column="50" selection-start-line="68" selection-start-column="50" selection-end-line="68" selection-end-column="50" />
               <folding>
                 <element signature="e#6#88#0#PHP" expanded="true" />
@@ -121,63 +111,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/cadastrarvoo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1466">
-              <caret line="308" column="41" lean-forward="true" selection-start-line="308" selection-start-column="41" selection-end-line="308" selection-end-column="41" />
-              <folding>
-                <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#1;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/assets/css/custom.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/painelvoo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-84">
-              <caret line="23" column="202" selection-start-line="23" selection-start-column="202" selection-end-line="23" selection-end-column="202" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/Cidades.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
+            <state relative-caret-position="2080">
               <caret line="109" column="32" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controller/CidadesController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-              <folding>
-                <element signature="e#196#214#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -199,6 +136,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="30cc70f21cf495f4d0ff2ae8b42592d81094729c" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -235,10 +177,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="1294" />
-    <option name="height" value="1047" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -251,66 +194,8 @@
         <subPane>
           <expand>
             <path>
-              <item name="curso" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curso" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="curso" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curso" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="curso" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curso" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="curso" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curso" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="curso" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curso" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="curso" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curso" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="curso" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curso" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="curso" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curso" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-              <item name="cia-logotipos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="curso" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curso" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="curso" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curso" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="locales" type="462c0819:PsiDirectoryNode" />
+              <item name="cursophptoledo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cursophptoledo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -363,6 +248,7 @@
       <workItem from="1535218531383" duration="594000" />
       <workItem from="1535324635919" duration="8302000" />
       <workItem from="1535408433764" duration="11064000" />
+      <workItem from="1535648314521" duration="107000" />
     </task>
     <task id="LOCAL-00001" summary="commit parcial">
       <created>1535170109320</created>
@@ -392,18 +278,27 @@
       <option name="project" value="LOCAL" />
       <updated>1535419312273</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="CONTROLLER">
+      <created>1535648359933</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1535648359933</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41335000" />
+    <option name="totallyTimeSpent" value="41552000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1294" height="1047" extended-state="0" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18638574" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11940298" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32968238" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -414,7 +309,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32968238" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.33077765" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3264642" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -466,13 +361,7 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Model/Produto.php" />
-    <entry file="file://$PROJECT_DIR$/View/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/View/footer.php" />
     <entry file="file://$PROJECT_DIR$/Controller/ProdutoController.php" />
     <entry file="file://$PROJECT_DIR$/View/cadastroproduto.php" />
     <entry file="file://$PROJECT_DIR$/Model/conexaomysql.php" />
@@ -483,9 +372,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/assets/img/cia-logotipos/1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/View/assets/img/cia-logotipos/1.jpg" />
     <entry file="file://$PROJECT_DIR$/Controller/AeronaveController.php" />
     <entry file="file://$PROJECT_DIR$/Controller/StatusVooController.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -522,98 +409,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/Cidades.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="109" column="32" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controller/CidadesController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding>
-            <element signature="e#196#214#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/cadastrarvoo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="72" column="66" lean-forward="true" selection-start-line="72" selection-start-column="66" selection-end-line="73" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/Crud.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/editarvoo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4623" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/painelvoo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-84">
-          <caret line="23" column="202" selection-start-line="23" selection-start-column="202" selection-end-line="23" selection-end-column="202" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php" />
+    <entry file="file://$PROJECT_DIR$/Controller/Crud.php" />
+    <entry file="file://$PROJECT_DIR$/View/editarvoo.php" />
+    <entry file="file://$PROJECT_DIR$/View/painelvoo.php" />
     <entry file="file://$PROJECT_DIR$/Controller/VooController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="593">
           <caret line="75" column="28" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/cadastrarvoo.php" />
+    <entry file="file://$PROJECT_DIR$/View/assets/css/custom.css" />
+    <entry file="file://$PROJECT_DIR$/View/header.php" />
+    <entry file="file://$PROJECT_DIR$/View/assets/js/functions.js" />
+    <entry file="file://$PROJECT_DIR$/Model/Voo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="233" column="24" selection-start-line="233" selection-start-column="24" selection-end-line="233" selection-end-column="24" />
           <folding>
-            <element signature="e#188#202#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/cadastrarvoo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1466">
-          <caret line="308" column="41" lean-forward="true" selection-start-line="308" selection-start-column="41" selection-end-line="308" selection-end-column="41" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#1;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/assets/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/assets/js/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#td#6;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#td#6;n#tr#0;n#!!top" expanded="true" />
+            <element signature="e#176#196#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Model/Cia.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="1360">
           <caret line="68" column="50" selection-start-line="68" selection-start-column="50" selection-end-line="68" selection-end-column="50" />
           <folding>
             <element signature="e#6#88#0#PHP" expanded="true" />
@@ -621,13 +451,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/Voo.php">
+    <entry file="file://$PROJECT_DIR$/Model/Cidades.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-594">
-          <caret line="234" column="47" selection-start-line="234" selection-start-column="47" selection-end-line="234" selection-end-column="47" />
-          <folding>
-            <element signature="e#176#196#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="2080">
+          <caret line="109" column="32" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="32" />
         </state>
       </provider>
     </entry>
